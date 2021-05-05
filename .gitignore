@@ -291,3 +291,5 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+# support files needed for Unity builds
+src/Nethereum.Unity/UnityEngine.dll
