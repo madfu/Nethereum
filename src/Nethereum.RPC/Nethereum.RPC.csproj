@@ -4,7 +4,7 @@
     <Description>Nethereum.RPC Ethereum Core RPC Class Library to interact via RCP with an Ethereum client, for example geth.</Description>
     <AssemblyTitle>Nethereum.RPC</AssemblyTitle>
     <VersionPrefix>$(NethereumVersion)</VersionPrefix>
-    <TargetFrameworks>$(DefaultFrameworksUnitySupport)</TargetFrameworks>
+    <TargetFrameworks>net451;net472;net5.0;netcoreapp2.1;netcoreapp3.1;netstandard1.1;netstandard2.0</TargetFrameworks>
     <AssemblyName>Nethereum.RPC</AssemblyName>
     <PackageId>Nethereum.RPC</PackageId>
     <PackageTags>Netherum;Ethereum;Blockchain;Crypto 2.0</PackageTags>

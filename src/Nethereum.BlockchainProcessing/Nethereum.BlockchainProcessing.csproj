@@ -5,7 +5,7 @@
     <Description>Nethereum.BlockchainProcessing Ethereum blockchain processing allowing to crawl Blocks, Transactions, TransactionReceipts and Logs (Event) for storage and / or using custom handlers like queuing , search, etc</Description>
     <AssemblyTitle>Nethereum.BlockchainProcessing</AssemblyTitle>
     <Version>$(NethereumVersion)</Version>
-    <TargetFrameworks>$(DefaultFrameworks)</TargetFrameworks>
+    <TargetFrameworks>net451;net472;net5.0;netcoreapp2.1;netcoreapp3.1;netstandard1.1;netstandard2.0</TargetFrameworks>
     <AssemblyName>Nethereum.BlockchainProcessing</AssemblyName>
     <PackageId>Nethereum.BlockchainProcessing</PackageId>
     <PackageTags>Netherum;Ethereum;Blockchain;Crypto 2.0</PackageTags>

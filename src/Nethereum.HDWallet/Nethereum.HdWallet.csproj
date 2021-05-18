@@ -6,7 +6,7 @@
     or (m/44'/60'/0'/x) used in Electrum, MyEtherWallet (ledger), Ledger Chrome App, imToken </Description>
     <AssemblyTitle>Nethereum.HdWallet</AssemblyTitle>
     <VersionPrefix>$(NethereumVersion)</VersionPrefix>
-    <TargetFrameworks>$(HdWalletFrameworks)</TargetFrameworks>
+    <TargetFrameworks>net452;net472;netstandard1.1;netstandard2.0</TargetFrameworks>
     <AssemblyName>Nethereum.HdWallet</AssemblyName>
     <PackageId>Nethereum.HdWallet</PackageId>
     <PackageTags>Nethereum;Ethereum;Blockchain;HdWallet</PackageTags>

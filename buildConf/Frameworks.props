@@ -70,24 +70,38 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Condition="'$(TargetUnityNet461AOT)' == 'true' Or '$(TargetUnityNet472AOT)' == 'true'" Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+    <Reference Condition="'$(TargetUnityNet461AOT)' == 'true'" Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\Newtonsoft.Json.dll</HintPath>
     </Reference>
   </ItemGroup>
 
-  <PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.1' Or  '$(TargetFramework)' == 'netcoreapp3.1' Or  '$(TargetFramework)' == 'net5.0' Or  '$(TargetFramework)' == 'netstandard1.1' Or '$(TargetFramework)' == 'net35' ">
+    <ItemGroup>
+        <Reference Condition="'$(TargetUnityNet472AOT)' == 'true'" Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+            <SpecificVersion>False</SpecificVersion>
+            <HintPath>..\..\wAILib\Newtonsoft.Json.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+
+    <PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.1' Or  '$(TargetFramework)' == 'netcoreapp3.1' Or  '$(TargetFramework)' == 'net5.0' Or  '$(TargetFramework)' == 'netstandard1.1' Or '$(TargetFramework)' == 'net35' ">
     <DefineConstants>$(DefineConstants);PCL</DefineConstants>
   </PropertyGroup>
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net451' Or '$(TargetFramework)' == 'net452' Or '$(TargetFramework)' == 'net461' Or '$(TargetFramework)' == 'net472'">
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net451' Or '$(TargetFramework)' == 'net452' Or '$(TargetFramework)' == 'net461'">
     <Reference Include="System" />
     <Reference Include="System.Numerics" />
     <Reference Include="Microsoft.CSharp" />
     <PackageReference Include="BouncyCastle" Version="1.8.2" />
   </ItemGroup>
 
-  <ItemGroup Condition="'$(TargetFramework)' == 'net472'">
+    <ItemGroup Condition=" '$(TargetFramework)' == 'net472'">
+        <Reference Include="System" />
+        <Reference Include="System.Numerics" />
+        <Reference Include="Microsoft.CSharp" />
+        <PackageReference Include="BouncyCastle" Version="1.8.9" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)' == 'net472'">
     <Reference Include="System.Net.Http" />
   </ItemGroup>
 

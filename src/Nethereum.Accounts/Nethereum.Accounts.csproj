@@ -4,7 +4,7 @@
     <Description>Nethereum.Accounts Ethereum Accounts and Transaction Managers Class Library  </Description>
     <AssemblyTitle>Nethereum.Accounts</AssemblyTitle>
     <Version>$(NethereumVersion)</Version>
-    <TargetFrameworks>$(DefaultFrameworks)</TargetFrameworks>
+    <TargetFrameworks>net451;net472;net5.0;netcoreapp2.1;netcoreapp3.1;netstandard1.1;netstandard2.0</TargetFrameworks>
     <AssemblyName>Nethereum.Accounts</AssemblyName>
     <PackageId>Nethereum.Accounts</PackageId>
     <PackageTags>Netherum;Ethereum;Blockchain;Crypto 2.0</PackageTags>

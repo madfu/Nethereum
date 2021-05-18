@@ -4,7 +4,7 @@
     <Description>Nethereum.RPC.Reactive, Reactive Client Subscriptions (WebSockets) and RPC Extensions for Nethereum</Description>
     <AssemblyTitle>Nethereum.RPC.Reactive</AssemblyTitle>
     <VersionPrefix>$(NethereumVersion)</VersionPrefix>
-    <TargetFrameworks>$(ReactiveFrameworks)</TargetFrameworks>
+    <TargetFrameworks>net461;net472;netcoreapp2.1;netcoreapp3.1;netstandard2.0</TargetFrameworks>
     <AssemblyName>Nethereum.RPC.Reactive</AssemblyName>
     <PackageId>Nethereum.RPC.Reactive</PackageId>
     <PackageTags>Json;RPC;Reactive;Ethereum;Nethereum</PackageTags>

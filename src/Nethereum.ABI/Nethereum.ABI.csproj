@@ -4,7 +4,7 @@
     <Description>Encoding and decoding of ABI Types, functions, events of Ethereum contracts</Description>
     <AssemblyTitle>Nethereum.ABI</AssemblyTitle>
     <Version>$(NethereumVersion)</Version>
-    <TargetFrameworks>$(DefaultFrameworksUnitySupport)</TargetFrameworks>
+    <TargetFrameworks>net451;net472;net5.0;netcoreapp2.1;netcoreapp3.1;netstandard1.1;netstandard2.0</TargetFrameworks>
     <AssemblyName>Nethereum.ABI</AssemblyName>
     <PackageId>Nethereum.ABI</PackageId>
   </PropertyGroup>

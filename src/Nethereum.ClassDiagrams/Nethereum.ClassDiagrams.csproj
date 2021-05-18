@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.10.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\..\packages\Portable.BouncyCastle.1.8.10\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -125,6 +129,7 @@
     <None Include="ContractQueryHandlers.cd" />
     <None Include="ContractTransactionHandlers.cd" />
     <None Include="EventExtensions.cd" />
+    <None Include="packages.config" />
     <None Include="Web3.cd" />
   </ItemGroup>
   <ItemGroup>

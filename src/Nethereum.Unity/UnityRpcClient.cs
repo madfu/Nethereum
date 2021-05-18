@@ -16,12 +16,17 @@ namespace Nethereum.JsonRpc.UnityClient
     public class UnityRpcClient<TResult>:UnityRequest<TResult>
     {
         private readonly string _url;
-        
+
         public UnityRpcClient(string url, JsonSerializerSettings jsonSerializerSettings = null)
         {
+            this._url = url;
+
             if (jsonSerializerSettings == null)
                 jsonSerializerSettings = DefaultJsonSerializerSettingsFactory.BuildDefaultJsonSerializerSettings();
-            this._url = url;
+
+            // added by OG for wAI -- 210515
+            jsonSerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+
             //check for nulls
             JsonSerializerSettings = jsonSerializerSettings;
         }
@@ -36,30 +41,31 @@ namespace Nethereum.JsonRpc.UnityClient
             return null;
         }
 
-        public IEnumerator SendRequest(RpcRequest request) 
+        public IEnumerator SendRequest(RpcRequest request)
         {
+            // upload handler
             var requestFormatted = new Unity.RpcModel.RpcRequest(request.Id, request.Method, request.RawParameters);
-        
             var rpcRequestJson = JsonConvert.SerializeObject(requestFormatted, JsonSerializerSettings);
             var requestBytes = Encoding.UTF8.GetBytes(rpcRequestJson);
-            var unityRequest = new UnityWebRequest(_url, "POST");
             var uploadHandler = new UploadHandlerRaw(requestBytes);
-            unityRequest.SetRequestHeader("Content-Type", "application/json");
-            uploadHandler.contentType= "application/json";
-            unityRequest.uploadHandler = uploadHandler;
+            uploadHandler.contentType = "application/json";
 
-            unityRequest.downloadHandler = new DownloadHandlerBuffer();
-                
+            // download handler
+            var downloadHandler = new DownloadHandlerBuffer();
+
+            // request
+            var unityRequest = new UnityWebRequest(_url, UnityWebRequest.kHttpVerbPOST, downloadHandler, uploadHandler);
+            unityRequest.SetRequestHeader("Content-Type", "application/json");
             yield return unityRequest.SendWebRequest();
-            
-            if(unityRequest.error != null) 
+
+            if(unityRequest.error != null)
             {
                 this.Exception = new Exception(unityRequest.error);
 #if DEBUG
                 Debug.Log(unityRequest.error);
 #endif
-            } 
-            else 
+            }
+            else
             {
                 try
                 {
@@ -73,7 +79,7 @@ namespace Nethereum.JsonRpc.UnityClient
                     this.Exception = HandleRpcError(responseObject); 
                 }
                 catch (Exception ex)
-                { 
+                {
                     this.Exception = new Exception(ex.Message);
 #if DEBUG
                     Debug.Log(ex.Message);

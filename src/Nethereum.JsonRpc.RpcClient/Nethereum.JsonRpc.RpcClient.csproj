@@ -4,7 +4,7 @@
     <Description>JsonRpc Rpc Client Nethereum provider</Description>
     <AssemblyTitle>Nethereum.JsonRpc.RpcClient</AssemblyTitle>
     <VersionPrefix>$(NethereumVersion)</VersionPrefix>
-    <TargetFrameworks>$(DefaultFrameworks)</TargetFrameworks>
+    <TargetFrameworks>net451;net472;net5.0;netcoreapp2.1;netcoreapp3.1;netstandard1.1;netstandard2.0</TargetFrameworks>
     <AssemblyName>Nethereum.JsonRpc.RpcClient</AssemblyName>
     <PackageId>Nethereum.JsonRpc.RpcClient</PackageId>
     <PackageTags>Json;RPC;Nethereum</PackageTags>

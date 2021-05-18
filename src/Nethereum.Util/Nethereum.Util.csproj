@@ -4,7 +4,7 @@
     <Description>Nethereum Utilities library, including Sha3 Keccack encoding and Address Checksum</Description>
     <AssemblyTitle>Nethereum.Util</AssemblyTitle>
     <VersionPrefix>$(NethereumVersion)</VersionPrefix>
-    <TargetFrameworks>$(DefaultFrameworksUnitySupport)</TargetFrameworks>
+    <TargetFrameworks>net451;net472;net5.0;netcoreapp2.1;netcoreapp3.1;netstandard1.1;netstandard2.0</TargetFrameworks>
     <AssemblyName>Nethereum.Util</AssemblyName>
     <PackageId>Nethereum.Util</PackageId>
     <PackageTags>Netherum;Ethereum;Blockchain</PackageTags>

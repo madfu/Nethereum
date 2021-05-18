@@ -21,4 +21,14 @@
       <HintPath>..\..\lib\Newtonsoft.Json.dll</HintPath>
     </Reference>
   </ItemGroup>
+
+    <ItemGroup Condition=" '$(TargetFramework)' == 'net472AOT' ">
+        <Reference Include="System" />
+        <PackageReference Include="TaskParallelLibrary" Version="1.0.2856" />
+        <PackageReference Include="BouncyCastle" Version="1.8.9" />
+        <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+            <SpecificVersion>False</SpecificVersion>
+            <HintPath>..\..\wAILib\Newtonsoft.Json.dll</HintPath>
+        </Reference>
+    </ItemGroup>
 </Project>

@@ -4,7 +4,7 @@
     <Description>Nethereum Contracts is the core library to interact via RPC with Smart contracts in Ethereum</Description>
     <AssemblyTitle>Nethereum.Contracts</AssemblyTitle>
     <VersionPrefix>$(NethereumVersion)</VersionPrefix>
-    <TargetFrameworks>$(DefaultFrameworksUnitySupport)</TargetFrameworks>
+    <TargetFrameworks>net451;net472;net5.0;netcoreapp2.1;netcoreapp3.1;netstandard1.1;netstandard2.0</TargetFrameworks>
     <AssemblyName>Nethereum.Contracts</AssemblyName>
     <PackageId>Nethereum.Contracts</PackageId>
     <PackageTags>Netherum;Ethereum;Blockchain;Crypto 2.0</PackageTags>
